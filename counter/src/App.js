@@ -20,7 +20,7 @@ class App extends Component {
     })
   }
 
-  //
+  
   handleMinus = () => {
     const newCount = this.state.count - 1
     this.setState({
