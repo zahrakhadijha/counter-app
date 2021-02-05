@@ -9,13 +9,24 @@ class App extends Component {
     }
   }
 
+  handlePlus = () => {
+    const newCount = this.state.count + 1
+    this.setState({
+      count: newCount,
+    })
+  }
+
+  handleMinus = () => {
+    console.log('clicked minus')
+  }
+
   render() {
     return (
       <>
         <h1>Counter</h1>
-        <button>+</button>
+        <button onClick={this.handlePlus}>+</button>
         <span>{this.state.count}</span>
-        <button>-</button>
+        <button onClick={this.handleMinus}>-</button>
       </>
     )
   }
