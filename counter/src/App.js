@@ -9,15 +9,23 @@ class App extends Component {
     }
   }
 
+  // make an arrow function so we have access to 'this' within the method
   handlePlus = () => {
+    // create variable to change state
+    // we can't use this.state within setState because this.setState is asynchronous
     const newCount = this.state.count + 1
+    // setState updates a key in state and the updates the page to reflect that update
     this.setState({
       count: newCount,
     })
   }
 
+  //
   handleMinus = () => {
-    console.log('clicked minus')
+    const newCount = this.state.count - 1
+    this.setState({
+      count: newCount,
+    })
   }
 
   render() {
